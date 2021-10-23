@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>tugas5</title>
+ </head>
+ <body>
+  <center><p>A Web Page</p>
+  <form action="/mailinglist.php" method="POST">
+    <input type="text" name="email" size="180"></center>
+  </form>
+  <form action="/client.php" method="POST" enctype="multipart/form-data">
+    <br><label>Upload Picture</label>
+    <input type="file" name="photo">
+  </form>
+  <form method="GET" action="pesanbarang.php">
+   <div>
+    <br><label>Title Here :</label>
+    <input type="text" name="title" value="" size="25">
+   </div>
+   <div>
+    <br><label>Description :</label>
+    <textarea name="text"  maxlength="3"></textarea>
+   </div>
+   <div>
+    <br><label>Account Number :</label>
+    <input type="text" name="number" value="" size="25">
+   </div>
+   <div>
+   <p>Bank :<input type="text" list="bank" name="bank" size="10">
+     <datalist id="bank">
+      <option value="BRI">
+      <option value="BCA">
+      <option value="BNI">
+      <option value="HSBC">
+      <option value="MANDIRI">
+      <option value="CIMBNIAGA">
+     </datalist>
+   </div>
+   <div>
+    <br><label>Account Holder :</label>
+    <input type="text" name="holder" value="" size="25">
+   </div>
+   <p>Transaction :<input type="text" list="transaction" name="transaction" size="1">
+     <datalist id="transaction">
+      <option value="1">
+      <option value="2">
+      <option value="3">
+     </datalist>
+     <br>*if the transcation is for 3 person, choose 3 form the drop-down list
+   </div>
+  <form action="/action_page.php">
+      <br><input type="checkbox" id="vehicle1" name="vehicle1" value="phone"checked>
+      <label for="vehicle1">Send to Mobile Phone</label></br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="email"checked>
+      <label for="vehicle2">Send to Email</label><br>
+  </form>
+   <div>
+    <br><label>Send to Mobile Phone :</label>
+    <input type="text" name="phone" value="" size="25">
+   </div>
+   <div>
+    <br><label>Send to Email :</label>
+    <input type="text" name="email" value="" size="25">
+   </div>
+    <p><input type="submit" value="Generate Nabr Link">
+  </form>
+ </body>
+</html>
